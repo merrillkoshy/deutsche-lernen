@@ -30,6 +30,8 @@ customerio==1.6
     ├── charset-normalizer [required: ~=2.0.0, installed: 2.0.12]
     ├── idna [required: >=2.5,<4, installed: 3.3]
     └── urllib3 [required: >=1.21.1,<1.27, installed: 1.26.12]
+deptry==0.18.0
+└── click [required: >=8.0.0,<9, installed: 8.0.4]
 email_validator==2.2.0
 ├── dnspython [required: >=2.0.0, installed: 2.1.0]
 └── idna [required: >=2.0.0, installed: 3.3]
