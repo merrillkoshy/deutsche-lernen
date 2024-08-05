@@ -30,7 +30,7 @@ jobs:
           RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
         run: |
           docker build -t ghcr.io/${{ github.repository }}:${{ github.sha }} .
-          echo $RENDER_API_KEY | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+          echo "${{ secrets.GITHUB_TOKEN }}"  | docker login ghcr.io -u ${{ github.actor }} --password-stdin
           docker push ghcr.io/${{ github.repository }}:${{ github.sha }}
 
       - name: Deploy to Render
