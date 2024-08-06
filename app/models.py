@@ -32,3 +32,12 @@ class Option(Base):
     option = Column(String, nullable=False)
     question_id = Column(UUID(as_uuid=True), ForeignKey("questions.id", ondelete="CASCADE"))
     question = relationship("Question", back_populates="options")
+
+
+class UserTable(Base):
+    __tablename__ = "users"
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    email = Column(String, index=True, nullable=False)
+    hashed_password = Column(String, nullable=False)
+    full_name = Column(String, nullable=False)
+    access = Column(String, nullable=False)
